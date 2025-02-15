@@ -1,0 +1,150 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif; /* Using a classic serif font */
+}
+
+/* Body background and layout */
+body {
+    background-color: #f4f4f4; /* Light background color for a classic feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; /* Dark text for readability */
+}
+
+/* Card container */
+.card {
+    width: 90%;
+    max-width: 470px;
+    background-color: #fff; /* Simple white background */
+    color: #333;
+    border-radius: 8px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid #ddd; /* Thin border for a refined look */
+}
+
+/* Search bar styling */
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search input {
+    border: 1px solid #ccc; /* Subtle border for the input */
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    padding: 12px 20px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100% - 60px); /* Adjust width so button fits comfortably */
+}
+
+.search button {
+    background-color: #007BFF; /* Classic blue button */
+    border: 1px solid #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+/* Search button icon inside */
+.search button img {
+    width: 20px; /* Icon size adjusted */
+    height: auto;
+    margin: 0;
+    vertical-align: middle;
+}
+/* Weather section */
+.weather h1 {
+    font-size: 48px; /* Classic font size for headings */
+    font-weight: normal;
+    color: #333;
+}
+
+.weather h2 {
+    font-size: 28px; /* Slightly smaller subheading */
+    font-weight: normal;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Details section */
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 24px; /* Smaller icons for a classic touch */
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 16px;
+    color: #666; /* Lighter text for details */
+}
+
+/* Error messages */
+.error {
+    color: #d9534f; /* Classic red color for errors */
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 95%; /* Allow card to occupy more width on smaller screens */
+        padding: 20px 15px; /* Adjust padding */
+    }
+
+    .search input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .search button {
+        width: 45px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .weather h1 {
+        font-size: 40px;
+    }
+
+    .weather h2 {
+        font-size: 24px;
+    }
+}
