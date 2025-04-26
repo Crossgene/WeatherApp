@@ -7,6 +7,9 @@
 </head>    
 <body>
     <div class="card">
+        <!-- App Title -->
+        <h1 class="app-title">Weather at Your Fingertips</h1>
+
         <div class="search">
             <input type="text" placeholder="Enter city name" spellcheck="false">
             <button><img src="images/search.png" alt="Search"></button>
@@ -50,13 +53,14 @@
         const searchBtn = document.querySelector(".search button");
         const weatherIcon = document.querySelector(".weather-icon");
 
+        // Function to check weather based on the city name
         async function checkWeather(city) {
             // Hide error and weather details initially
             document.querySelector(".error").style.display = "none";
             document.querySelector(".weather").style.display = "none";
             document.querySelector(".details").style.display = "none";
 
-            // Fetch weather data
+            // Fetch weather data from the API
             const response = await fetch(apiUrl + city + `&appid=${apikey}`);
             if (response.status == 404) {
                 // If city is not found, show error message
@@ -93,6 +97,13 @@
         // Event listener for search button
         searchBtn.addEventListener("click", () => {
             checkWeather(searchBox.value);
+        });
+
+        // Event listener for pressing the Enter key
+        searchBox.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                checkWeather(searchBox.value);
+            }
         });
     </script>  
 </body>
